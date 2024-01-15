@@ -1,4 +1,6 @@
-﻿namespace AccessModifiers
+﻿using Amazon;
+
+namespace AccessModifiers
 {
     internal class Program
     {

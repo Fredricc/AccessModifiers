@@ -1,4 +1,4 @@
-﻿namespace AccessModifiers
+﻿namespace Amazon
 {
     public class Customer
     {
@@ -6,16 +6,11 @@
         public string Name { get; set; }
         public void Promote()
         {
-            var rating = CalculateRating(excludingOrder: true);
-            if (rating == 0)
-                Console.WriteLine("Promoted to level 1");
-            else
+           var calculator = new RateCalculator();
+            var Rating = calculator.Calculate(this);
+
                 Console.WriteLine("Promoted to level 2");
         }
 
-        private int CalculateRating(bool excludingOrder)
-        {
-            return 0;
-        }
     }
 }
